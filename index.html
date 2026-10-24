@@ -90,7 +90,7 @@ vless://7fb8c4e7-2f8c-40f5-ba5e-d0f70bbd0ffb@de4.sky-vault.top:443?encryption=no
         }
     </style>
 </head>
-<body>
+<body class="authorized">
     <div id="toast">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
         Подписка скопирована!
@@ -219,22 +219,6 @@ vless://7fb8c4e7-2f8c-40f5-ba5e-d0f70bbd0ffb@de4.sky-vault.top:443?encryption=no
     </div>
 
     <script>
-        // ============================================
-        // НАСТРОЙКИ ДОСТУПА
-        // ============================================
-        const ACCESS_TOKEN = "ab9cf7c2-45f8-4012-ad38-dfe8b1747c3b";
-        // ============================================
-
-        (function checkAccess() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const token = urlParams.get('token');
-            
-            if (token === ACCESS_TOKEN) {
-                document.body.classList.add('authorized');
-            } else {
-                document.body.classList.remove('authorized');
-            }
-        })();
 
         function sw(tab) {
             document.getElementById('t-incy').classList.toggle('active', tab === 'incy');
